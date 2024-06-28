@@ -1,0 +1,924 @@
+@font-face {
+    font-family: 'LeJour';
+    src: url('Le\ Jour\ Script.woff2') format('truetype');
+    /* Agrega formatos adicionales si tienes otros, como woff y woff2 */
+}
+
+/* Establece un tamaño de fuente base en el elemento raíz */
+html {
+    font-size: 16px;
+}
+
+/* Utiliza rem para tamaños de fuente relativos al elemento raíz */
+p {
+    font-size: 1rem; /* Tamaño de fuente predeterminado (16px) */
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+    p {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.seccion1{
+    background-image: url("fotos/1.jpg"); /* Establece la primera imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.container2{
+    background-color: rgba(255, 255, 255, 0.2 ); /* Fondo semi-transparente para legibilidad */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Puedes ajustar el ancho del contenedor según tus necesidades */
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Desplazar el contenedor hacia atrás en un 50% de su propio ancho y alto */ 
+}
+
+.container2 h1{
+    color: white;
+    font-weight: 300;
+}
+
+#NosCas {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: -11%;
+    font-weight: 350;
+    letter-spacing: 3px;
+    margin-top: -0.5%;
+}
+
+#caroyadri{
+    font-family: "MonteCarlo", cursive;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: -2%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.1; /* Reducción del interlineado */
+   letter-spacing: 4px;
+    
+}
+
+#fecha {
+    text-align: center;
+    font-family: 'Montserrat', serif;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /*animation-name: aparecerDesdeDerecha;*/
+}
+
+.seccion1 hr{
+    width: 40%;
+    height: 1px;
+    background-color: white;
+    border: none;
+}
+
+.seccion2 {
+    background-image: url(fotos/fondoo.jpg);
+    height: auto;
+    margin-top: -1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Cont{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#ten{
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+    margin-top: 9%;
+    
+}
+
+
+
+.seccion2 p {
+    font-family: 'Montserrat', serif;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #9A9898;    
+
+}
+ 
+
+#div2{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 5rem; /* Espacio entre los párrafos */
+    position: static;
+    padding-bottom: 5%;
+    transform:translateY(-50%);
+    margin-top: -4%;
+}
+
+#nomMa{
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-top: 15%;
+    margin-left: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6f6d6d;
+}
+
+#nomPa{
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6f6d6d;
+
+}
+
+
+
+.mapa1, .mapa2{
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: 'Montserrat', serif;
+  letter-spacing: 3px;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 0.5px 0.5px 0px 0px, 0.5px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.mapa1:hover, .mapa2:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.col {
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+
+.seccion3 {
+    background-image: url(fotos/3.jpg);
+    height: auto;
+    margin-top: -1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+}
+
+#evento h1, #misa h1 {
+    font-family: "MonteCarlo", cursive;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 200;
+    margin-top: -3%;
+}
+
+
+.cont3{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: -100%; /* Espacio entre los párrafos */
+    padding-bottom: 3%;
+    padding-top: 3%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+
+#misa, #evento{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#misa{
+    margin-left: 30%;
+}
+#evento{
+    margin-right: 30%;
+}
+
+#linr, #linE{
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    border: none;
+    margin-top: -12%;
+}
+#dir, #dir2, #lugar2, #lugar1{
+    text-align: center;
+    font-family: 'Montserrat', serif;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top:-3%;
+}
+
+#lugar2, #lugar1{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#dir, #dir2{
+    font-size: 1rem;
+    max-width: 80%;
+}
+#hor, #hor2{
+    font-size: 2.5rem;
+    margin-top: -1%;
+    font-weight: 550;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'Trykker', serif; 
+    color: white;
+    font-weight: 100;
+}
+
+
+.cont4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.foto1{
+  flex:1;
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-size: cover; /* Estira la imagen para cubrir todo el contenedor */ 
+}
+
+
+.confirma{
+    flex:1;
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 70vh; /* Altura al 70% de la altura de la ventana */
+    object-position: center center;
+    text-align: center;
+}
+
+#imagenconf{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center top;
+    background-image: url(fotos/foto8.jpg);
+    background-size: cover; /* Escala la imagen para cubrir el contenedor sin distorsionarla */
+    background-position: center top; 
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */    
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+#sec4{
+    font-size: 5rem;
+    color:#c7bbb0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 5px;
+    margin-top: 4%;
+}
+.confirma hr{
+    color:#c7bbb0;
+    width: 30%;
+    margin-top: -8%;
+    margin-bottom: 5%;
+}
+
+.cont5{
+    text-align: center;
+    align-items: center;
+    margin-top: -6.5%;
+    font-family: 'Trykker', serif;
+    
+}
+
+.cont5 h1{
+    color: #7A6046;
+    font-weight: 200;
+    letter-spacing: 10%;
+    font-size: 1.8rem;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+#tienes{
+    color:#c7bbb0;
+    font-size: 1.2rem;
+    letter-spacing: 10%;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+    margin-top: -3%;
+}
+
+#sec4, #NosGus, #ayus{  
+    font-family: 'Trykker', serif; 
+    text-align: center;
+    font-weight: 200;
+}
+
+#sec4{
+    font-family: "MonteCarlo", cursive;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+#conf, #h11, #asis, #lin1{
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+#lin1{
+    margin-top: -8%;
+}
+.number-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 43%;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid rgba(122, 96, 70, 0.1);
+    background-color:rgba(122,96,70,0.2);
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+   
+}
+
+.number-input:hover{
+    border: 2px solid rgba(122, 96, 70, 0.5)
+}
+
+  
+.number-input button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    color:#c7bbb0;
+    font-family: 'Trykker', serif;
+    font-weight: 800;
+    
+}
+
+  
+.number-input input {
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    background:none;
+    width: 40px;
+    height: 30px;
+    outline: none;
+    color: rgba(125,96,68,1);
+    font-family: 'Trykker', serif;
+}
+
+.yes-no-input {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px;
+    margin-top: -1%; 
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+    
+}
+  
+.option {
+    background-color: rgba(125,96,68,0.2);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 13px;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+
+}
+
+.option:hover{
+    background-color: rgba(125,96,68,0.5);
+}
+  
+.option:focus {
+    outline: none; /* Eliminar el contorno al hacer clic */
+}
+  
+#yes.active, #no.active{
+    background-color: #7D6044;
+    color: white;
+}
+  
+  
+#boton2{
+    margin-top: 3%;
+    background-color: rgba(125, 96, 68, 0.2);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(125, 96, 68, 0.8);
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 0.5px 0.5px 0px 0px, 0.5px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+#boton2:hover{
+    background-color: rgba(125,96,68,0.3);
+    color: rgb(125, 96, 68,1);
+}
+
+.secc5{
+    background-image: url(fotos/fondoo.jpg);
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+
+.cont55{
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columnas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 2%;
+}
+
+.vest, .regalos{
+    flex-basis: calc(50% -10px);
+    margin: 5px;
+    width: 40%;
+
+}
+
+.cont55 h1{
+    font-size: 4rem;
+    color:#c7bbb0;
+    font-family: "MonteCarlo", cursive;
+    font-weight: 200;
+    margin-top:4%;
+    line-height: 0.8;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+
+.sobre, .regalos2, .regalos3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+
+.parr{
+    text-align: center;
+    width:100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: -2%;
+}
+
+.parr p{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Montserrat', serif;
+    letter-spacing: 3px;
+    color: #9A9898;
+    font-size: 1.2rem;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+#formal, #sob, #liv, #sob2{
+    font-family: 'Montserrat', serif;
+    letter-spacing: 3px;
+    color: #998571;
+    font-size: 1.3rem;
+}
+#sob, #liv, #sob2{
+    margin-top: -2%;
+}
+#formal{
+    margin-top:-8%;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+
+#lvert{
+    height: 200px;
+    margin-top: 5%;
+    width: 1.6px;
+    background-color:#7A6046 ;
+    border: none;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+/* Estilos para dispositivos móviles o pantallas pequeñas (768px o menos) */
+
+.secc6 {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 75vh;
+    background-image: url(fotos/5.jpg);
+    background-size: cover; /* Para que la imagen cubra todo el contenedor */
+    background-position: center bottom; /* Centrar la imagen */
+   
+    
+}
+
+.cont66 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ajusta el texto del h1 al centro */
+    color: white;
+   
+    
+}
+
+.cont66 {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+#Nues {
+    margin: 0; /* Elimina cualquier margen */
+    padding-top: 60px; /* Ajusta este valor según sea necesario */
+    color: white;
+    font-family: 'Imperial Script', cursive;
+    font-size: 8rem;
+    font-weight: 200;
+    display: flex;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: -5%; /* Empieza 50px más abajo */
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-in, margin-top 1s ease-in;
+    
+}
+
+
+.countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+    margin-top: -5%;
+}
+
+.countdown-item {
+    margin-right: 0 80px;
+    font-size: 24px;
+}
+#days, #hours, #minutes, #seconds, .colon{
+    font-family: 'Crimson Text', serif;
+    color: white;
+    font-size: 9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.colon{
+    margin: 0 20px;
+}
+
+.label{
+    font-size:16px;
+}
+
+#days1, #hours1, #minutes1, #seconds1{
+    display: block;
+    color: white;
+    margin-top: -5%;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#days1, #hours1, #minutes1{
+    margin-left:-30%;
+}
+
+.secc7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#foto10, #foto2, #foto3, #foto4 {
+    padding: 20px;
+    object-position: center center;
+    object-fit: cover;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+#foto2{
+    margin-top: -2.5%;
+}
+
+.contenedor-superior {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1500px; /* Ajusta este valor según tus necesidades */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-imagenes {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Espacio entre las imágenes */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+    object-position: center bottom;
+}
+
+.contenedor-imagen {
+    width: 40%;
+}
+
+.contenedor-inferior {
+    width: 100%;
+    margin-top: -3%;
+    margin-left: 0.8%;
+    background-size: cover; /* Para que la imagen cubra todo el contenedor */
+    background-position: center bottom; /* Centrar la imagen */
+    background-position: center bottom;
+}
+  
+.footer {
+    margin-top: -2%;
+    padding: 5px 0; /* Agrega espacio alrededor del contenido */
+    text-align: center; /* Centra el contenido horizontalmente */
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+  
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+  
+.logo {
+    width: 13%; /* Ajusta el ancho de tu logo según tus necesidades */
+    height: auto; /* Mantén la proporción original */
+}
+  
+@media screen and(max-width: 480px){
+    .confirma{
+        width: 100%;
+        padding:10px;
+    } 
+   
+}
+
+@media(max-width: 1010px){
+    .cont5 h1{
+        font-size: 1.6rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    #div2 {
+      grid-template-columns: 1fr;
+    }
+    #nomMa{
+        margin-top: 8%;
+        width: 100%;
+    }
+    #nomPa{
+        margin-top: -8%;
+        width: 100%;
+    }
+    .cont3{
+       grid-template-columns: 1fr; 
+    }
+    #misa{
+        margin-left: 0%;
+    }
+    #evento{
+        margin-right: 0%;
+        margin-top: 10%;
+        padding-bottom: 5%;
+    }
+    .mapa1,.mapa2 {
+        padding: 0.25em 0.75em;
+    }
+    .cont4{
+        flex-direction: column; /* Cambiar de fila a columna */
+        align-items: flex-start; /* Otra alineación que prefieras */
+    }
+    #imagenconf{
+        height: 100%;
+        width: 100%;
+    }
+    .button-54 {
+        padding: 0.25em 0.75em;
+      }
+}
+
+@media (max-width:450px){
+    #ten{
+        font-size: 1.4rem;
+    }
+    #nomMa{
+        margin-top: 10%;
+        font-size: 1.1rem;
+    }
+    #nomPa{
+        font-size: 1.1rem;
+        margin-top: -15%;
+    }
+    #sec4{
+        font-size: 4rem;
+
+    }
+    
+}
+
+@media (max-width:460px){
+    #cod, #reglos{
+        font-size:2.5rem;
+    }
+    #formal, #sob, #liv, #sob2{
+        font-size: 1rem;
+    }
+    #liv{
+        margin-right:6%
+    }
+   
+    #ninos{
+        font-size:1rem;
+    }
+}
+
+@media(max-width: 330px){
+    #sec4{
+        font-size: 3rem;
+    }
+}
+@media (max-width:300px){
+    #ten{
+        font-size: 1.1rem;
+    }
+    #nomMa{
+        margin-top: 10%;
+        font-size: 0.9rem;
+    }
+    #nomPa{
+        font-size: 0.9rem;
+        margin-top: -20%;
+    }
+    #div1{
+        top: 32%
+    }
+}
+
+@media (max-width:846px){
+    #days, #hours, #minutes, #seconds, .colon{
+        font-size: 5rem;
+    }
+    .cont66 h1{
+        margin-top: 30%;
+    }
+}
+@media (max-width: 555px){
+    #days, #hours, #minutes, #seconds, .colon{
+        font-size: 2.5rem;
+    }
+    #days1, #hours1, #minutes1, #seconds1{
+        font-size: 0.8rem;
+    }
+    #days1, #hours1, #minutes1{
+        margin-left:-60%;
+    }
+    .cont66 h1{
+        font-size: 5.5rem;
+        line-height: 0.8;
+        margin-top: 70%;
+
+    }
+    
+
+}
+@media(max-width:1118px){
+    .cont55 h1{
+        font-size: 3.5rem;
+    }
+    .my-h1{
+        margin-left: 8%;
+    }
+
+}
+@media(max-width:922px){
+    .sobre{
+        margin-top: -12%;
+    }
+    #reglos{
+        margin-top:9%;
+
+    }
+}
+@media(max-width:844px){
+    #lin1{
+        margin-top: -15%;
+    }
+    #h11{
+        margin-top: -5%;
+    }
+}

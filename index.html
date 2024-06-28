@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Virtual</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Trykker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Rouge+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <section class = "seccion1">
+            <div class= "container2">
+                <img id = "cya" src="fotos/A&A.png" alt="C&A" width="220" height="220">
+                <hr id = "linea">
+                <div class = "textos">
+                    <h1 id = "NosCas">¡NOS CASAMOS!</h1>
+                    <h1 id = "caroyadri">Alberto y Alejandra</h1>
+                    <h1 id = "fecha">04  |  10  | 2024</h1>
+                </div>
+            </div>
+        </section>
+        <section class="seccion2">
+            <div class = "Cont">
+                <div class = "col fade-in" id="div1">
+                <p id= "ten"> TENEMOS EL HONOR DE INVITARLOS A CELEBRAR NUESTRO ENLACE MATRIMONIAL CON LA BENDICIÓN DE DIOS Y DE NUESTROS PADRES:</p>
+                </div>
+                <div class = "col fade-in" id="div2">
+                    <p id="nomMa">GREGORIA MARTÍNEZ ARANDA<br> </p>
+                    <p id="nomPa">SERGIO GONZÁLEZ SIFUENTES <br> MARICELA PICAZO SALAS</p>
+                </div> 
+            </div>
+        </section>
+        <section class="seccion3">
+            <div class = "cont3">
+                <div class="col fade-in" id="misa">
+                    <img id = "iglesia" src="fotos/iglesia.png" alt="igl" width="180" height="180">
+                    <h1 id= "mmisa">Recepción</h1>
+                    <hr id="linr">
+                    <h2 id="hor">18:00 hrs</h2>
+                    <h2 id='lugar1'> PARR. NUESTRA SEÑORA DE GPE. SALUD DE LOS ENFERMOS</h2>
+                    <h3 id="dir">Cam. de la Capilla 4215, Coritjo del Río, 64890 Mty, N.L.</h3>
+                    <a href="https://www.google.com.mx/maps/place/Parroquia+Nuestra+Se%C3%B1ora+De+Guadalupe+Salud+De+Los+Enfermos/@25.6079367,-100.2706348,17z/data=!3m1!4b1!4m6!3m5!1s0x8662bf5d8828954d:0x7d4d4f7fa080e6a!8m2!3d25.6079319!4d-100.2680599!16s%2Fg%2F1tfrbm1d?entry=ttu", target="button">
+                        <button class="mapa1" role="button">Ir al mapa📍</button>
+                    </a>
+                </div>
+                <div class="col fade-in" id="evento">
+                    <img id = "eveento" src="fotos/evento.png" alt="eve" width="180" height="180">
+                    <h1 id = "evento1">Evento</h1>
+                    <hr id="linE">
+                    <h2 id="hor2">20:00 hrs</h2>
+                    <h2 id= 'lugar2'>VERITE SOCIAL VENUE</h2>
+                    <h3 id="dir2">Carr Nacional 268, Villas la Rioja, 64984 Mty, N.L.</h3>
+                    <a href = "https://www.google.com.mx/maps/place/Verite+Social+Venue/@25.5767712,-100.2478761,17z/data=!3m1!4b1!4m6!3m5!1s0x8662c7117d306ffb:0x3fb6793efae5dd06!8m2!3d25.5767664!4d-100.2453012!16s%2Fg%2F11c6rwj7fq?entry=ttu", target="button">
+                        <button class="mapa2", role="button">Ir al mapa📍</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="seccion4">
+            <div class="cont4">
+                <div class="foto1">
+                    <img src="fotos/2.jpg" alt="Imagen" id= imagenconf>
+                </div>
+                <div class="confirma">
+                    <h1 id="sec4">Confirmación</h1>
+                    <hr id="lin1">
+                    <div class="cont5">
+                        <h1 id="h11">¡Hola, Sofía González Martínez<span id="guestName"></span>!</h1>
+                        <p id="tienes">Tienes 2 <span id="allowedGuests"></span> invitados permitidos.</p>
+                        <p id="conf">Confirma cuántos asistirán:</p>
+                        <div class="number-input">
+                            <button id="decrement">-</button>
+                            <input type="text" id="quantity" value="0" />
+                            <button id="increment">+</button>
+                        </div>
+                        <p id="asis">¿Asistirás a la boda?</p>
+                        <div class="yes-no-input">
+                            <button id="yes" class="option">SÍ</button>
+                            <button id="no" class="option">NO</button>
+                            <input type="hidden" id="choice" value="no" />
+                        </div>
+                        <button id="boton2" onclick="submitResponse()">Enviar Respuesta</button>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </section>
+        <section class = "secc5">
+            <div class = cont55>
+                <div class="columnas">
+                    <div class = "vest">
+                        <h1 class= "my-h1" id="cod"> Código de vestimenta</h1>
+                        <p id= "formal">FORMAL</p>
+                        <img src="fotos/formaal.png" id="vest" width="0" height="0">
+                    </div>
+                    <hr id="lvert">
+                    <div class = "regalos">
+                        <h1 id="reglos">Regalos</h1>
+                        <div class = "sobre">
+                            <p id="sob">AMAZON</p>
+                        </div>
+                        <div class = "regalos2">
+                            <p id="liv">LIVERPOOL</p>
+                        </div>
+                        <div class = "regalos3">
+                            <p id="sob2">SOBRE</p>
+                        </div>
+                    </div>
+                    
+                </div>
+              <div class="parr">
+                <p id="ninos">
+                    Por favor, tengan en cuenta que nuestra boda será un evento exclusivo
+                    para adultos. Agradecemos su comprensión y esperamos celebrar juntos este día especial.
+                 </p>
+             </div>
+            </div>
+        </section>
+        <section class="secc6">
+            <div class="cont66">
+                <h1 id="Nues">Nuestro día</h1>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class ="colon">:</span>
+                        <span id="days1">Días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class ="colon">:</span>
+                        <span id="hours1">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class ="colon">:</span>
+                        <span id="minutes1">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span id="seconds1">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secc7">
+            <div class =contenedor-superior>
+                <div class ="contenedor-imagenes">
+                    <img src="fotos/DSC09514.jpg" id="foto10" width="900" height="400">
+                    <img src="fotos/DSC08877.jpg" id="foto2" width="900" height="400">
+                </div>
+                <div class ="cont71">
+                    <img src="fotos/4.jpg" id="foto3" width="550" height="820">
+                </div>
+            </div>
+            <div class = "contenedor-inferior">
+                <img src="fotos/DSC03896.jpg" id ='foto4' width ="1470" height="400">
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="logo-container">
+                <a href="https://www.instagram.com/craftana.details/">
+                    <img src="fotos/craftanalogo.png" alt="craftana.details" class="logo">
+                  </a>
+            </div>
+        </footer>          
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+  
