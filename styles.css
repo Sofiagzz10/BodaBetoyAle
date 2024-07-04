@@ -55,7 +55,7 @@ body {
     width: 100%; /* Puedes ajustar el ancho del contenedor según tus necesidades */
     display: flex;
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%); /* Desplazar el contenedor hacia atrás en un 50% de su propio ancho y alto */ 
 }
@@ -68,18 +68,18 @@ body {
 #NosCas {
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: -11%;
+    margin-bottom: -5%;
     font-weight: 350;
-    letter-spacing: 3px;
-    margin-top: -0.5%;
+    letter-spacing: 3px;   
 }
 
 #caroyadri{
     font-family: "MonteCarlo", cursive;
     text-align: center;
-    font-size: 5rem;
+    font-size: 6rem;
+    margin-top: 3%;
     margin-bottom: -2%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     line-height: 1.1; /* Reducción del interlineado */
@@ -91,7 +91,7 @@ body {
     text-align: center;
     font-family: 'Montserrat', serif;
     letter-spacing: 3px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     /*animation-name: aparecerDesdeDerecha;*/
 }
@@ -174,8 +174,6 @@ body {
 
 }
 
-
-
 .mapa1, .mapa2{
   background-color: rgba(255, 255, 255, 0.2);
   font-family: 'Montserrat', serif;
@@ -207,12 +205,13 @@ body {
 .seccion3 {
     background-image: url(2.jpg);
     height: auto;
-    margin-top: -1%;
-    background-size: cover;
+    /* margin-top: -1%; */
+    background-size: 110% auto; /* Aumenta el tamaño de la imagen de fondo */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left center; /* Posiciona la imagen más hacia la derecha */
     display: flex;
 }
+
 
 #evento h1, #misa h1 {
     font-family: "MonteCarlo", cursive;
@@ -297,9 +296,14 @@ body {
 
 
 .foto1{
-  flex:1;
+  flex: 1;
+  background-image: url(3.jpg); /* Añade esta línea si quieres usar background-image */
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  background-size: cover; /* Estira la imagen para cubrir todo el contenedor */ 
+  background-size: cover; /* Estira la imagen para cubrir todo el contenedor */
+  background-position: center center; /* Mueve la imagen hacia arriba */
+  opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */    
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
 }
 
 
@@ -318,7 +322,7 @@ body {
     object-position: center top;
     background-image: url(foto8.jpg);
     background-size: cover; /* Escala la imagen para cubrir el contenedor sin distorsionarla */
-    background-position: center top; 
+    background-position: center center; 
     opacity: 0; /* Inicialmente, oculta los elementos */
     transform: translateY(-50px); /* Desplaza los elementos hacia arriba */    
     transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
@@ -530,6 +534,21 @@ body {
 
 }
 
+
+#sob a, #liv a {
+    color: inherit; /* Hereda el color del elemento padre */
+    text-decoration: underline; /* Elimina el subrayado */
+    text-decoration-style: dotted;
+    text-decoration-color: #dcdad8;
+}
+
+/* Efecto hover para el enlace */
+#sob a:hover, #liv a:hover {
+    font-size: 1.5rem;
+    color: #6d6660; /* Cambia el color cuando se pasa el cursor por encima */
+    text-decoration: underline; /* Agrega un subrayado al pasar el cursor por encima */
+}
+
 .cont55 h1{
     font-size: 4rem;
     color:#c7bbb0;
@@ -737,9 +756,97 @@ body {
     background-position: center bottom; /* Centrar la imagen */
     background-position: center bottom;
 }
+
+
+/* Container for photo section */
+.photo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap size as needed */
+    padding: 10px;
+}
+
+/* Container for the grid layout */
+.photo-grid {
+    display: flex;
+    gap: 10px; /* Adjust the gap size as needed */
+}
+
+/* Columns */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap size as needed */
+}
+
+.column-70 {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column-30 {
+    flex: 3;
+}
+
+/* Images */
+.horizontal-img {
+    width: 100%;
+    height: 49.5vh;
+    aspect-ratio: 4 / 3; /* Adjust the aspect ratio as needed */
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+
+.column-70 .horizontal-img:nth-child(1) {
+    object-position: center 40%;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+.column-70 .horizontal-img:nth-child(2) {
+    object-position: center 80%;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+
+.vertical-img {
+    width: 100%;
+    height: 100vh;
+    aspect-ratio: 3 / 4; /* Adjust the aspect ratio as needed */
+    object-fit: cover;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+.full-width-img img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center 80%;
+    opacity: 0; /* Inicialmente, oculta los elementos */
+    transform: translateY(-50px); /* Desplaza los elementos hacia arriba */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Agrega transiciones suaves */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photo-grid {
+        flex-direction: column;
+    }
+    
+    .column-70, .column-30 {
+        flex: 1;
+    }
+}
   
 .footer {
-    margin-top: -2%;
     padding: 5px 0; /* Agrega espacio alrededor del contenido */
     text-align: center; /* Centra el contenido horizontalmente */
     opacity: 0; /* Inicialmente, oculta los elementos */
