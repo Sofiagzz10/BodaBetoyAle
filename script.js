@@ -1,7 +1,7 @@
 const NosCas = document.getElementById('NosCas');
 const caroyadri = document.getElementById('caroyadri');
-const fecha = document.getElementById('fecha');
-const cya = document.getElementById('cya')
+// const fecha = document.getElementById('fecha');
+// const cya = document.getElementById('cya')
 const linea = document.getElementById('linea')
 const imagen = document.querySelector('.imagen-oculta');
 const div1 = document.getElementById("div1");
@@ -18,7 +18,7 @@ const input = document.querySelector(".number-input");
 const asis =document.getElementById("asis");
 const yes = document.querySelector(".yes-no-input");
 const boton2 =document.getElementById("boton2");
-const foto1 =document.getElementById("imagenconf")
+const foto1 =document.querySelector(".foto1")
 const cod = document.getElementById("cod")
 const formal = document.getElementById("formal")
 const vest = document.getElementById("vest")
@@ -29,10 +29,14 @@ const liv = document.querySelector(".regalos2")
 const parr = document.getElementById("ninos")
 const nues = document.getElementById("Nues")
 const countd = document.querySelector(".countdown")
-const foto10 = document.getElementById("foto10")
-const foto2 = document.getElementById("foto2")
-const foto3 = document.getElementById("foto3")
-const foto4 = document.getElementById("foto4")
+// const foto10 = document.getElementById("foto10")
+// const foto2 = document.getElementById("foto2")
+// const foto3 = document.getElementById("foto3")
+// const foto4 = document.getElementById("foto4")
+const fotob1 = document.getElementById("fotob1")
+const fotob2 = document.getElementById("fotob2")
+const fotob3 = document.getElementById("fotob3")
+const fotob4 = document.getElementById("fotob4")
 const footer = document.querySelector(".footer")
 const regalos3 = document.querySelector(".regalos3")
 const cont66 = document.querySelector('.cont66');
@@ -41,21 +45,21 @@ const cont66 = document.querySelector('.cont66');
 NosCas.style.opacity = '0';
 caroyadri.style.opacity = '0';
 fecha.style.opacity = '0';
-cya.style.opacity = '0';
-linea.style.opacity = '0';
+// cya.style.opacity = '0';
+// linea.style.opacity = '0';
 
-function aparecerlogo(){
-    cya.style.transition = 'opacity 1s ease-in, transform 1s ease-in';
-    cya.style.opacity = '1';
-    cya.style.transform = 'translateX(0)'
+// function aparecerlogo(){
+//     cya.style.transition = 'opacity 1s ease-in, transform 1s ease-in';
+//     cya.style.opacity = '1';
+//     cya.style.transform = 'translateX(0)'
 
-}
-function aparecerlinea(){
-    linea.style.transition = 'opacity 1s ease-in, transform 1s ease-in';
-    linea.style.opacity = '1';
-    linea.style.transform = 'translateX(0)'
+// }
+// function aparecerlinea(){
+//     linea.style.transition = 'opacity 1s ease-in, transform 1s ease-in';
+//     linea.style.opacity = '1';
+//     linea.style.transform = 'translateX(0)'
 
-}
+// }
 function aparecerNosCas() {
     NosCas.style.transition = 'opacity 1s ease-in, transform 1s ease-in';
     NosCas.style.opacity = '1';
@@ -72,8 +76,8 @@ function aparecerFecha() {
     fecha.style.transform = 'translateX(0)';
 }
 
-setTimeout(aparecerlogo, 200)
-setTimeout(aparecerlinea,500)
+// setTimeout(aparecerlogo, 200)
+// setTimeout(aparecerlinea,500)
 setTimeout(aparecerNosCas, 800); // Retraso para la animación de izquierda
 setTimeout(aparecerCaroyAdri, 1000); // Retraso para la animación de caroyadri
 setTimeout(aparecerFecha, 1200)
@@ -150,10 +154,14 @@ intersectionObserver.observe(regalos3);
 intersectionObserver.observe(parr);
 intersectionObserver.observe(nues);
 intersectionObserver.observe(countd);
-intersectionObserver.observe(foto10);
-intersectionObserver.observe(foto3);
-intersectionObserver.observe(foto2);
-intersectionObserver.observe(foto4);
+// intersectionObserver.observe(foto10);
+// intersectionObserver.observe(foto3);
+// intersectionObserver.observe(foto2);
+// intersectionObserver.observe(foto4);
+intersectionObserver.observe(fotob1);
+intersectionObserver.observe(fotob3);
+intersectionObserver.observe(fotob2);
+intersectionObserver.observe(fotob4);
 intersectionObserver.observe(footer);
 
 
@@ -218,3 +226,4 @@ if (distance <= 0) {
   document.getElementById('seconds').innerText = '00';
 }
 }, 1000);
+
